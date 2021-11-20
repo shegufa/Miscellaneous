@@ -1,0 +1,18 @@
+If you have read the explanation already, the algorithm should be pretty clear.
+
+
+Input : n
+
+Step 1: Create an boolean array of size n and assign all values to 1. [ This is for storing n bit binary equivalent of a number]
+Step 2: Create a function which converts a boolean array to its decimal equivalent. 
+        i.e.: If the function sees that b[4] = [1,1,1,1] it will return (or you can just print in this case) decimal equivalent of 1111 which is 15.
+        Let's name the function "btoi" .
+Step 3: Find the decimal of this array which is b[n] = [1,1,1,1] using the "btoi" function. which will print 15.
+Step 4: Then, take one bit at a time, and set the value to 0 for each n bits and use "btoi" function to find the decimal equivalent and print it.
+        i.e.: for iteration i , i=0: b[n] = [1,1,1,0] , i=1: b[n] = [1,1,0,1], i=2: b[n] = [1,0,1,1] etc.
+   
+Step 5: We will get n+1 values from step 3 and 4. For remaining 2n-(n+1) turns print 0 or any value within the limit of 0 to 2ⁿ -1.
+
+
+Output: n+1 values will be printed on step 3 and 4. Rest of them will be printed in step 5.
+             
